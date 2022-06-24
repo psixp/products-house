@@ -16,6 +16,9 @@ const homeController = {
         const produto = ProdutoModel.findById(id)
 
         return res.render('produtos/detalhes', {produto: produto})
+    },
+    getCarrinho: (req, res) => {
+        res.render('home/carrinho');
     }
 
 }
