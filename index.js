@@ -23,7 +23,7 @@ app.use(session({
 
 app.use(homeRouter);
 app.use(authRouter);
-app.use("/adm/produtos", produtoRouter);
+app.use(produtoRouter);
 
 app.use((req, res, next) => {
     return res.status(404).render('home/not-found', { error: 'Página não encontrada' });

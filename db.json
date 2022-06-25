@@ -5,16 +5,24 @@
             "nome": "Console Microsoft Xbox Series S, 512GB, Branco",
             "descricao": "Xbox Series S, o menor e mais elegante de todos os tempos. Com taxas de quadros mais altas, tempos de carregamento mais rápidos e mundos mais ricos e dinâmicos, o Xbox Series S oferece desempenho e velocidade de última geração em um formato compacto e totalmente digital.",
             "imagem": "https://images.kabum.com.br/produtos/fotos/128561/console-microsoft-xbox-series-s-500gb-branco-rrs-00006_1601067301_gg.jpg",
-            "preco": "2249.90",
+            "preco": 2249.9,
             "ativo": true
         },
         {
             "id": "2fde397b-c98a-4188-89bf-26f75edb5cff",
             "nome": "Xbox Series X",
             "imagem": "https://imgs.ponto.com.br/55014095/1xg.jpg",
-            "preco": "4500",
+            "preco": 4500,
             "descricao": "Baita Vídeo Game, provavelmente o melhor do mundo!\r\n\r\nMas é caro pra um ca*ete!",
             "ativo": true
+        },
+        {
+            "nome": "Controle Xbox One Elite Series 2",
+            "imagem": "https://m.media-amazon.com/images/I/71vNw0EbrTL._AC_SL1500_.jpg",
+            "preco": 1400,
+            "descricao": "Um controle de Elite!",
+            "ativo": true,
+            "id": "91d96bfb-6ddb-4178-a9ba-3b79f130ff89"
         }
     ],
     "usuarios": [
@@ -32,6 +40,12 @@
             "senha": "$2a$10$L6KQhoBugQn5488sYHsyKOiNeL4pCvN7ex6ZS6X3n9zlyYFHUT41K",
             "id": "2ebf51e0-a590-4cf5-b6ab-928aba26ff0d",
             "tipoDeUsuario": "admin"
+        },
+        {
+            "nome": "luiz Carlos",
+            "email": "luiz@mail.com",
+            "senha": "$2a$10$TB0SHeWF83h/kpEMgR3iGuCbEmqWhKOOvUOW2LhSdi45wAq.8mwKe",
+            "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac"
         }
     ]
 }

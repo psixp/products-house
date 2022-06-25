@@ -92,7 +92,7 @@
                     <h3>
                       <%= produto.nome %>
                     </h3>
-                    <h4 class="text-muted">R$ <%= produto.preco %> <small>À vista no pix</small></h4>
+                    <h4 class="text-muted">R$ <%= produto.preco.toFixed(2) %> <small>À vista no pix</small></h4>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <a href="/produtos/<%= produto.id %> " class="btn btn-sm btn-outline-secondary">View</a>
