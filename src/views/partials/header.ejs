@@ -7,7 +7,7 @@
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
-        <% if(locals.usuario && usuario.tipoUsuario == "admin") { %>
+        <% if(locals.usuario && usuario.tipoDeUsuario == "admin") { %>
           <li><a href="/adm/produtos" class="nav-link px-2 text-white">Produtos</a></li>
         <% } %>
         <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>

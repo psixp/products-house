@@ -4,8 +4,8 @@ const produtoController = require('../controllers/produtoController');
 const isLogin = require('../middlewares/isLogin');
 const isAdmin = require('../middlewares/isAdmin');
 
-/* router.use(isLogin);
-router.use(isAdmin); */
+router.use(isLogin);
+router.use(isAdmin);
 router.get('/adm/produtos', produtoController.index);
 router.get('/adm/produtos/cadastro', produtoController.getCadastro);
 router.get('/adm/produtos/detalhes/:id', produtoController.getProduto);

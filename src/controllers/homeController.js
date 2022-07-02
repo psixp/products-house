@@ -3,7 +3,11 @@ const ProdutoModel = require('../models/produtoModel');
 const homeController = {
     index: (req, res) => {
         const produtos = ProdutoModel.findAll()
-        res.render('home/landingpage', { produtos: produtos });
+        if (req.session.usuario) {
+            res.render('home/landingpage', { produtos, usuario: req.session.usuario
+            });
+        }
+        res.render('home/landingpage', { produtos });
     },
     getCadastro: (req, res) => {
         res.render('home/cadastro');
@@ -16,9 +20,6 @@ const homeController = {
         const produto = ProdutoModel.findById(id)
 
         return res.render('produtos/detalhes', {produto: produto})
-    },
-    getCarrinho: (req, res) => {
-        res.render('home/carrinho');
     }
 
 }

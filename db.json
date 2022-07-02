@@ -38,8 +38,7 @@
             "nome": "Pablo Cardias Flores",
             "email": "pablo_six@live.com",
             "senha": "$2a$10$L6KQhoBugQn5488sYHsyKOiNeL4pCvN7ex6ZS6X3n9zlyYFHUT41K",
-            "id": "2ebf51e0-a590-4cf5-b6ab-928aba26ff0d",
-            "tipoDeUsuario": "admin"
+            "id": "2ebf51e0-a590-4cf5-b6ab-928aba26ff0d"
         },
         {
             "nome": "luiz Carlos",
@@ -47,5 +46,6 @@
             "senha": "$2a$10$TB0SHeWF83h/kpEMgR3iGuCbEmqWhKOOvUOW2LhSdi45wAq.8mwKe",
             "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac"
         }
-    ]
+    ],
+    "carrinho": []
 }

@@ -1,10 +1,11 @@
 const bcrypt = require('bcryptjs');
 const Usuario = require('../models/usuariosModel');
 
-const authController = {
+const AuthController = {
     showLogin: (req, res) => {
         res.render('home/login');
     },
+    
     showCadastrar: (req, res) => {
         res.render('home/cadastro');
     },
@@ -33,17 +34,22 @@ const authController = {
         const { email, senha } = req.body;
         const usuario = Usuario.findOne(email);
 
-        if (!usuario) {
-            return res.render('home/login', { error: 'Usuário não cadastrado' });
-        }
-
-        if (!bcrypt.compareSync(senha, usuario.senha)) {
-            return res.render('home/login', { error: 'Senha incorreta' });
+        if(!usuario || !bcrypt.compareSync(senha, usuario.senha)){
+            return res.render("home/login", {error: "Email ou senha estão incorretos ou não existe."});
         }
 
         req.session.usuario = usuario;
-        return res.redirect('/');
-    }
+        return res.redirect("/");
+
+    },
+
+    logout: (req, res) => {
+        req.session.destroy(function(err) {
+            // cannot access session here
+        });
+
+        return res.redirect('/login');
+    },
 }
 
-module.exports = authController;
+module.exports = AuthController;

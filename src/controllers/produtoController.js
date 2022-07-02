@@ -27,7 +27,7 @@ const produtoController = {
     getProduto: (req, res) => {
         const {id} = req.params
         const produto = ProdutoModel.findById(id)
-
+       
         return res.render('adm/produtos/detalhes', {produto: produto})
     },
     getEditar: (req, res) => {

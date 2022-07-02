@@ -6,7 +6,7 @@ const path = require('path');
 const homeRouter = require('./src/routers/homeRouter');
 const produtoRouter = require('./src/routers/produtoRouter');
 const authRouter = require('./src/routers/authRouter');
-
+const carrinhoRouter = require('./src/routers/carrinhoRouter');
 
 app.use(methodOverride('_method'));
 app.use(express.static('./src/public'));
@@ -24,9 +24,10 @@ app.use(session({
 app.use(homeRouter);
 app.use(authRouter);
 app.use(produtoRouter);
+app.use(carrinhoRouter);
 
 app.use((req, res, next) => {
     return res.status(404).render('home/not-found', { error: 'Página não encontrada' });
 })  
 
-app.listen(3000, () => console.log('Projeto Rodando...'))
+app.listen(3000, () => console.log('Projeto Rodando na rota http://localhost:3000 ...'))
