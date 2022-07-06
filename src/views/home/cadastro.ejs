@@ -17,30 +17,30 @@
     <%- include('../partials/header') %>
 
         <main class="form-signin w-100 mx-auto py-5">
-            <% if(typeof error !== 'undefined') { %>
+            <% if(typeof error !=='undefined' ) { %>
                 <div class="alert alert-danger" role="alert">
                     <%= error %>
-                  </div>
-           <% } %>
-              
-            <form action="/cadastrar" method="post">
-                <h1 class="h3 mb-3 fw-normal">Faça o cadastro</h1>
+                </div>
+                <% } %>
 
-                <div class="mb-3">
-                    <label for="floatingInput">Nome </label>
-                    <input type="text" name="nome" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="floatingInput">Email </label>
-                    <input type="email" name="email" class="form-control" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="floatingPassword">Senha</label>
-                    <input type="password" name="senha" class="form-control">
-                </div>
+                    <form action="/cadastrar" method="post">
+                        <h1 class="h3 mb-3 fw-normal">Faça o cadastro</h1>
 
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar</button>
-            </form>
+                        <div class="mb-3">
+                            <label for="floatingInput">Nome </label>
+                            <input type="text" name="nome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="floatingInput">Email </label>
+                            <input type="email" name="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="floatingPassword">Senha</label>
+                            <input type="password" name="senha" class="form-control">
+                        </div>
+
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar</button>
+                    </form>
         </main>
 
         <%- include('../partials/footer') %>

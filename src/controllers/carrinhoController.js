@@ -1,7 +1,7 @@
 const CarrinhoController = {
 
     showCarrinho: (req, res) => {
-        const { carrinho } = req.session;
+        let { carrinho } = req.session;
         let total = 0;
 
         if (!carrinho) {
@@ -32,11 +32,11 @@ const CarrinhoController = {
 
     removeCarrinho: (req, res) => {
         const { id } = req.params
-        const { carrinho } = req.session
+        let { carrinho } = req.session
 
         const index = carrinho.findIndex(produto => produto.id === id)
 
-        const carrinhoAtualizado = carrinho.splice(index, 1) // 1 quantidade que vai deletar
+        let carrinhoAtualizado = carrinho.splice(index, 1) // 1 quantidade que vai deletar
         carrinho = carrinhoAtualizado
 
         if (carrinho.length <= 0) {
